@@ -1,0 +1,62 @@
+
+<div *ngIf="emptyCart" class="empty_cart jumbotron">
+    <h3 style="text-align: center;font-weight: bold;">Empty Cart</h3>
+    <mat-icon class="center">face</mat-icon>
+    <hr>
+    <img class="center" src="../assets/img/empty_cart.png" alt="cart">
+</div>
+
+
+<div class="row jumbotron" *ngIf='!emptyCart' >
+    <div class="container">
+        <div class="col-md-12">
+          
+            <caption>Order Summary</caption>
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: -webkit-fill-available;">
+
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+              
+                <!-- Position Column -->
+                <ng-container matColumnDef="name">
+                    <img src="../assets/img/pizza_header.png">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="qty">
+                  <th mat-header-cell *matHeaderCellDef> Quantity </th>
+                  <td mat-cell *matCellDef="let element"> {{element.qty}} </td>
+                </ng-container>
+              
+                <!-- Weight Column -->
+                <ng-container matColumnDef="price">
+                  <th mat-header-cell *matHeaderCellDef> Price </th>
+                  <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+                </ng-container>
+                <ng-container matColumnDef="type">
+                    <th mat-header-cell *matHeaderCellDef> Size </th>
+                    <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+                  </ng-container>
+              
+              
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+              <div class="center">
+                <h3>Total Amount : {{totalAmount}}</h3>
+                <button mat-raised-button color="warn" (click)="onOrderNow()" >Order now</button>
+              </div>
+            
+        </div>
+    </div>
+</div>
+
+  
+  
+  
+  <!-- Copyright 2020 Google LLC. All Rights Reserved.
+      Use of this source code is governed by an MIT-style license that
+      can be found in the LICENSE file at http://angular.io/license -->

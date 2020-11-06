@@ -1,0 +1,58 @@
+
+  <div class="jumbotron">
+<section>
+<div class="row">
+    <div class="left-div col-md-6 ">
+        <i>Are you Hungry ?</i>
+        <h2 style="font-weight: bold;">Don't wait!!</h2>
+    </div>
+    
+    <div class="right-div col-md-6">
+        <img src="../assets/img/pizza_header.png" alt="logo">
+    </div>
+</div>
+</section>
+<section>
+
+<hr>
+    <div class="row">
+      
+            
+    
+        <div class="container">
+            <mat-expansion-panel >
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                   All Pizzas
+
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+            <div class="pizza col-md-4" *ngFor="let pizza of pizzaItems">
+              
+                <img src="../assets/img/Pizza.png" alt=""><br>
+                <i style="margin: auto;
+                width: 50%;
+                padding: 100px;" >{{pizza.size}}</i>
+                  <h3 style="
+                  width: 50%;
+                  padding-left:65px;">{{pizza.name}}</h3>
+                    <span style="font-weight: bold; padding: 30px;">{{pizza.price}} $</span>
+                    <button mat-raised-button color="primary"(click)="onAddToCart(pizza)">Add</button>
+               
+            </div>
+           
+
+        </mat-expansion-panel>
+           
+        </div>
+
+
+       
+    </div>
+    
+</section>
+</div>
+
+
+
+

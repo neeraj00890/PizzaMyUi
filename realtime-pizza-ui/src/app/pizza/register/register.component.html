@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="jumbotron">
+        <div class="container">
+            <div class ="col-md-4"></div>
+            <div class ="col-md-4 well">
+                <form [formGroup]="regForm">
+                  <p>
+                    <mat-form-field appearance="legacy">
+                      <mat-label> Name</mat-label>
+                      <input formControlName="name" matInput placeholder="Name" required>
+                      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                      
+                    </mat-form-field>
+                  </p>
+                  <p>
+                        <mat-form-field appearance="legacy">
+                          <mat-label>User name</mat-label>
+                          <input formControlName="userName" matInput placeholder="User name" required>
+                          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                          <mat-hint>provide legeal username</mat-hint>
+                        </mat-form-field>
+                      </p>
+                      <p>
+                        <mat-form-field appearance="legacy">
+                          <mat-label>Password</mat-label>
+                          <input type="password" formControlName="password" matInput placeholder="Password" required>
+                          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                         
+                        </mat-form-field>
+                        <mat-form-field appearance="legacy">
+                            <mat-label>Confirm Password</mat-label>
+                            <input type="password" formControlName="cpassword" matInput placeholder="Confirm Password" required>
+                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                           
+                          </mat-form-field>
+                      </p>
+                     
+                      
+                      <button mat-raised-button color="primary" (click)="onRegistration(regForm)" [disabled]="regForm.invalid">Register</button>
+                      <a routerLink="/login"> Already have an account ?</a>
+                      <!-- Copyright 2020 Google LLC. All Rights Reserved.
+                          Use of this source code is governed by an MIT-style license that
+                          can be found in the LICENSE file at http://angular.io/license -->
+                </form>
+            </div>
+            <div class ="col-md-4"></div>
+        </div>
+    </div>
+    
+</div>
+
+

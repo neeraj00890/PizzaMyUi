@@ -1,0 +1,23 @@
+.empty_cart{
+   
+    padding: 50px;
+}
+
+.empty_cart img{
+    height: 250px;
+    width: 300px;
+    
+  
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+caption{
+    display: table-cell;
+    font-size: larger;
+    font-weight: 500;
+}

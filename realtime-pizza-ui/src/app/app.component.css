@@ -1,0 +1,18 @@
+mat-toolbar img{
+    height: 55px;
+    width: 60px;
+    padding: 10px;
+}
+div.right-tool  ul{
+    display: flex;
+   
+}
+div.right-tool  ul li{
+   padding: 25px;
+   list-style-type: none;
+}
+div.right-tool  ul li:hover{
+    color:black;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+ }
